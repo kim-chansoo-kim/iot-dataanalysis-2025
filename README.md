@@ -46,14 +46,15 @@
 - 로컬 직접 환경 설정
 - 사이킷런, 텐서플로, 쿠다, 파이토치...
 
-##### 파이썬 가상환경
+##### 파이썬 가상환경(pypi.org)
 - 가상환경 생성 명령어
 ```shell
 > python -m venv mlvenv
 ```
 - 가상환경 사용
 ```shell
-> .\mlvenv\Scripts\activate 
+> .\mlvenv\Scripts\activate\
+(mlvenv) PS C:\Source\iot-dataanalysis-2025>
 ```
 
 - 가상환경은 깃허브에 올라가지 않도록 처리
@@ -66,12 +67,19 @@
 
 - 맷플롯립(Matplotlib) 한글 설정
 ```python
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# 한글로 Matplotlib 사용시 항상 필요
 from matplotlib import rcParams, font_manager, rc
 
-font_path = 'C:/Windows/Fonts/NanumGothic.ttf' # 나눔고딕코딩 사용, 나눔고딕에서 오류발생(!)
-font = font_manager.FontProperties(fname=font_path).get_name() # 실제 설치된 폰트 이름조회
-rc('font', family=font) # 한글깨짐현상 해결!!
-rcParams['axes.unicode_minus'] = False # 한글 사용시 마이너스 표시 깨짐 해결!
+font_path = 'C:/Windows/Fonts/malgun.ttf'
+font = font_manager.FontProperties(fname=font_path).get_name()
+rc('font', family=font)
+rcParams['axes.unicode_minus'] = False
+
+sns.set_style('darkgrid')
+sns.set_theme(font='Malgun Gothic', rc={'axes.unicode_minus': False})
 ```
 
 - 시본(Seaborn) 모듈(맥플롯립 하위 모듈) 설치
@@ -138,32 +146,69 @@ import seaborn as sns # seaborn 사용
 
 ## 2일차
 
+### 빅데이터에 필요한 모듈
+- Numpy(배열), Pandas(데이  터 조작), Matplotlib(차트), Seaborn(차트꾸미기)
+- Folium(지도), Faker(더미데이터 생성)
+
+- [노트북](./day02/mldl01_주요모듈학습.ipynb)
+
 ### 데이터 전처리
+- 머신러닝 / 딥러닝 이전에 데이터 가공
+
+- [노트북](./day02/mldl02_데이터전처리.ipynb)
 
 ### 선형회귀
+- 회귀(Regression) : 두 변수 사이의 상관관계를 분석하는 방법
+    - 임의의 수치를 예측하는 문제
 
-### 로지스틱회귀
+- `과대적합` - overfit. 모델 훈련세트 성능이 테스트세트 성능보다 훨씬 높을때.
+- `과소적합` - underfit. 훈련세트 성능 낮거나, 테스트세트 성능이 너무 높을때.
 
-### 확률적 경사하강법
+<img src="./image/ml0004.png" width="500">
 
-### 인공신경망
+- K-최근접 이웃 회귀 알고리즘 문제점 확인
 
-### 심층신경망
+[노트북](./day02/mldl03_선형회귀.ipynb)
 
-### 합성곱신경망
-
-### 순차데이터와 순환신경망
+- 선형회귀 중 직선(1차 방정식)의 문제접 확인
 
 ## 3일차
 
+### 선형회귀 중 다항회귀
+
+### 로지스틱회귀
+
+
+### 확률적 경사하강법
+
+
+### 인공신경망
+
+
+### 심층신경망
+
+
+### 합성곱신경망
+
+
+### 순차데이터와 순환신경망
+
+
+
+
 ## 4일차
+
 
 ## 5일차
 
+
 ## 6일차
+
 
 ## 7일차
 
+
 ## 8일차
+
 
 ### 코딩테스트
