@@ -385,8 +385,14 @@ import seaborn as sns # seaborn 사용
 ## 6일차
 
 ### 파이토치 기본학습
+- 파이토치 기본
+
+- [노트북](./day06/mldl01_파이토치_기본.ipynb)
 
 ### 파이토치 실습
+- 파이토치로 Fashion-MNIST 실습
+
+- [노트북]()
 
 ## 7일차
 
