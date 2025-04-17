@@ -413,6 +413,15 @@ import seaborn as sns # seaborn 사용
 ## 8일차
 
 ### YOLO
+- YOLO(You Only Look Once) - 객체 탐지, 이미지 분할 등을 위한 딥러닝 모델
+    - 2015 배포
+    - 이미지를 영역을 나눠, 각 영역에 대한 경제 상자와 확률을 예측
+    - 이미지를 인식, 로봇, 자율 주행, 스마트 CCTV 활용 중
+    - 스마트 CCTV : 자동차사고, 화재경보 등 사고 즉시 파악 예보
+
+- 최초 공식사이트 : https://pjreddie.com/darknet/yolo/
+- 2020년 파이토치 기반 변경(YOLO v.5) : https://www.ultralytics.com/ko
+- 2025년 현재 v.12(beta), v.11(stable)
 
 ### 토이 프로젝트
 
