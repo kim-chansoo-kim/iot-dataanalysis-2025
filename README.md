@@ -423,6 +423,7 @@ import seaborn as sns # seaborn 사용
 - 2020년 파이토치 기반 변경(YOLO v.5) : https://www.ultralytics.com/ko
 - 2025년 현재 v.12(beta), v.11(stable)
 
-### 토이 프로젝트
+- [노트북](./day08/mldl01_YOLO_start.ipynb)
 
 ### 코딩테스트
+- 코딩테스트
